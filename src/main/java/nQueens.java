@@ -39,7 +39,7 @@ public class nQueens {
 
     private static void tryToPlaceQueen(int column){
         //if(column == matrix.length){
-        if(doneMaggie()){
+        if(done()){
             printStructure();
             return;
         }
@@ -120,17 +120,6 @@ public class nQueens {
     }
 
     static boolean done(){
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix.length; j++) {
-                if(OK(j,i)){
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
-    static boolean doneMaggie(){
         int numberOfQueens = 0;
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
